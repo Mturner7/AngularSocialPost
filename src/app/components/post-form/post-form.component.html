@@ -1,0 +1,19 @@
+<div class="post-form-container">
+    <form>
+        <div class="post-form-title">
+            <label for="newPost.title">Title</label>
+            <input type="text" [(ngModel)]="newPost.title" />
+            <ng-container *ngIf="validTitle == false">
+                Please fill out this field
+            </ng-container>
+        </div>
+        <div class="post-form-thought">
+            <label for="newPost.thought">Thought</label>
+            <input type="text" [(ngModel)]="newPost.thought" />
+            <ng-container *ngIf="validThought == false">
+                Please fill out this field
+            </ng-container>
+        </div>
+        <button (click)="emitCreateEvent()" type="submit">Save</button>
+    </form>
+</div>
